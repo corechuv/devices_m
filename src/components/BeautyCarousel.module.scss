@@ -22,8 +22,6 @@
     overflow: hidden;
     color: var(--text);
 
-    margin-top: -60px;
-    padding-top: 60px;
     background: black;
 }
 
@@ -168,7 +166,7 @@
     border: none;
     background: #3c3c3c;
     color: #fff;
-    display: grid;
+    display: none;
     place-items: center;
     cursor: pointer;
     z-index: 3;
@@ -234,6 +232,10 @@
 @media (min-width: 700px) {
     .content {
         padding: 36px 0;
+    }
+
+    .ctrl {
+        display: grid;
     }
 
     .subtitle {
