@@ -99,7 +99,7 @@ export default function Home() {
                     ))}
                 </Carousel>
             </div>
-            <section className={cls.sh}>
+            <section className={cls.sh} style={{padding: 0}}>
                 <section className={cls.sh__content}>
                     <BeautyCarousel />
                 </section>
