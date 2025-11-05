@@ -99,11 +99,7 @@ export default function Home() {
                     ))}
                 </Carousel>
             </div>
-            <section className={cls.sh} style={{padding: 0}}>
-                <section className={cls.sh__content}>
-                    <BeautyCarousel />
-                </section>
-            </section>
+            <BeautyCarousel />
             <section className={cls.sh}>
                 <h2 className={cls.sh__title}>Our partners</h2>
                 <section className={cls.sh__content}>
