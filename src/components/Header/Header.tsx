@@ -88,7 +88,6 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                 <nav className={cls.header__nav}>
                     <div className={cls.logo}>
                         <img src="/logo_full.png" alt="logo-mira" className={cls.logo__img} />
-                        MIRA
                         <span className={cls.sl}>devices</span>
                     </div>
                     <div className={cls.f}>
