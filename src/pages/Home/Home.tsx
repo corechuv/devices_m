@@ -122,7 +122,7 @@ export default function Home() {
                             <div className={cls.grid__w}>
                                 <img src="./1___.png" alt="" className={cls.grid__im} />
                             </div>
-                            <h4 className={cls.grid__ti}>Iryna Marinia</h4>
+                            <h4 className={cls.grid__ti}>Iryna Marinina</h4>
                             <p className={cls.grid__sti}>Expert in hardware cosmetology. Doctor, cosmetologist.</p>
                         </div>
                         <div className={cls.grid__item}>
