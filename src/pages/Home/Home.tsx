@@ -74,7 +74,6 @@ export const items: CarouselItem[] = [
 export default function Home() {
     return (
         <div className={cls.content}>
-            <div className={cls.boxS}></div>
             <div style={{ display: "none" }}>
                 <Carousel
                     breakpoints={[
