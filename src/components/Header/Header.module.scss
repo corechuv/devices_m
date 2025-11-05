@@ -1,0 +1,70 @@
+// src/components/Header/Header.module.scss
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #0b0b0b61;
+  backdrop-filter: blur(30px);
+
+  /* плавный выезд/заезд */
+  transform: translateY(0);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  will-change: transform;
+
+  &__nav {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.f {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+}
+
+.logo {
+  font-size: 28px;
+  line-height: 0.85;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #e93d7f;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    height: 26px;
+    display: none;
+  }
+}
+
+.sl {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.201);
+}
+
+.isHidden {
+  transform: translateY(calc(-1 * var(--header-height, 80px)));
+}
+
+.withShadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}

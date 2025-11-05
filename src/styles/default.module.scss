@@ -1,0 +1,48 @@
+// src/styles/default.module.scss
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.boxS {
+    width: 600px;
+    height: 60px;
+    box-shadow: 0 70px 460px rgb(93 0 195 / 24%);
+    position: fixed;
+    top: -60px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+
+/* Buttons */
+button {
+    border-radius: 30px;
+    border: 1px solid #b1bb953b;
+    padding: 0.6em 1.2em;
+    height: 45px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn {
+    &__primary {
+        background: #b1bb95;
+        color: black;
+    }
+}

@@ -1,0 +1,236 @@
+/* Dark, glossy, beauty-salon vibe */
+:root {
+    --bg: #0b0d12;
+    --panel: #0f121a;
+    --text: #eef0f3;
+    --muted: #bbbbbb;
+
+    /* warm rose → peach → gold gradient */
+    --accent-a: #f472b6;
+    /* rose */
+    --accent-b: #fb7185;
+    /* coral */
+    --accent-c: #f59e0b;
+    /* amber */
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    height: clamp(380px, 54vw, 520px);
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    color: var(--text);
+}
+
+.track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 600ms cubic-bezier(.2, .65, .2, 1);
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.media {
+    position: absolute;
+    inset: 0;
+}
+
+.ap {
+    /* image style (keeps your className from snippet) */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: contrast(1.05) saturate(1.05);
+    transform: scale(1);
+    padding: 30px;
+}
+
+.vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* content layer */
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 28px clamp(16px, 3vw, 32px);
+}
+
+.title {
+    font-size: clamp(22px, 3.4vw, 68px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+    margin: 0;
+    line-height: clamp(22px, 3.4vw, 68px);
+}
+
+.subtitle {
+    font-size: clamp(14px, 1.8vw, 18px);
+    font-weight: 300;
+    color: var(--muted);
+    max-width: 52ch;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* ---- Buttons ---- */
+
+.btn {
+    --ring: rgba(255, 255, 255, 0.22);
+    --glass: rgba(255, 255, 255, 0.06);
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    gap: 8px;
+    height: 36px;
+    padding: 0 13px;
+    border-radius: 999px;
+    border: 1px solid rgba(167, 130, 145, 0.15);
+    color: var(--text);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Primary gradient */
+.btnPrimary,
+.btn__primary {
+    /* alias for your snippet */
+    background: rgb(218 72 116);
+    border: none;
+    color: #000000;
+}
+
+/* Outline variant */
+.btnOutline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+/* ---- Controls ---- */
+
+.ctrl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 3;
+    padding: 0;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.ctrl:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.115);
+    cursor: pointer;
+    transition: width .2s ease, background .2s ease, border-color .2s ease;
+    padding: 0;
+}
+
+.dotActive {
+    width: 26px;
+    background: #da4874b8;
+    border-color: transparent;
+}
+
+/* A11y helper */
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Responsive tweaks */
+@media (min-width: 700px) {
+    .content {
+        padding: 36px 40px;
+    }
+
+    .subtitle {
+        max-width: 60ch;
+    }
+}

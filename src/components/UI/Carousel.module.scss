@@ -1,0 +1,108 @@
+.root {
+  position: relative;
+  width: 100%;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* predictable sizing */
+.root * {
+  box-sizing: border-box;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.track {
+  display: flex;
+  gap: var(--rc-gap, 16px);
+  will-change: transform;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: calc(
+    (100% - (var(--rc-gap, 16px) * (var(--rc-spv, 1) - 1))) / var(--rc-spv, 1)
+  );
+}
+
+.slide > * {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.left { left: 8px; }
+.right { right: 8px; }
+
+/* Dots */
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 1;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 0;
+}
+
+.dot[aria-current="true"] {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* focus & high-contrast */
+.arrow:focus-visible,
+.dot:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  .arrow, .dot {
+    forced-color-adjust: none;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow, .dot { transition: none !important; }
+}
