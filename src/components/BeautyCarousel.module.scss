@@ -3,7 +3,7 @@
     --bg: #0b0d12;
     --panel: #0f121a;
     --text: #eef0f3;
-    --muted: #bbbbbb;
+    --muted: #747474;
 
     /* warm rose → peach → gold gradient */
     --accent-a: #f472b6;
@@ -74,13 +74,15 @@
 }
 
 .title {
-    font-size: clamp(32px, 3.4vw, 68px);
-    font-weight: 700;
+    font-size: clamp(32px, 3.4vw, 82px);
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.2px;
-    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
     margin: 0;
-    line-height: clamp(22px, 3.4vw, 68px);
+    line-height: clamp(32px, 3.4vw, 82px);
+    padding: 0 16px;
+    color: #161616
 }
 
 .subtitle {
@@ -89,6 +91,7 @@
     color: var(--muted);
     max-width: 52ch;
     margin: 0;
+    padding: 0 16px;
 }
 
 .buttons {
@@ -96,6 +99,7 @@
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 12px;
+    padding: 0 16px;
 }
 
 /* ---- Buttons ---- */
@@ -103,23 +107,22 @@
 .btn {
     --ring: rgba(255, 255, 255, 0.22);
     --glass: rgba(255, 255, 255, 0.06);
-
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-family: "Roboto", sans-serif;
     gap: 8px;
-    height: 36px;
-    padding: 0 13px;
-    border-radius: 999px;
+    height: 43px;
+    padding: 0 21px;
+    border-radius: 14px;
     border: 1px solid rgba(167, 130, 145, 0.15);
     color: var(--text);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     font-weight: 600;
     letter-spacing: 0.3px;
-    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
     cursor: pointer;
     text-decoration: none;
 }
@@ -136,7 +139,7 @@
 .btnPrimary,
 .btn__primary {
     /* alias for your snippet */
-    background: rgb(218 72 116);
+    background: black;
     border: none;
     color: white;
 }
@@ -157,7 +160,7 @@
     width: 40px;
     border-radius: 50%;
     border: none;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(243, 243, 243);
     color: #fff;
     display: grid;
     place-items: center;
@@ -168,11 +171,8 @@
     svg {
         width: 20px;
         height: 20px;
+        color: #161616;
     }
-}
-
-.ctrl:hover {
-    background: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
@@ -199,7 +199,7 @@
     width: 8px;
     border-radius: 999px;
     border: none;
-    background: rgba(255, 255, 255, 0.115);
+    background: rgb(227, 227, 227);
     cursor: pointer;
     transition: width .2s ease, background .2s ease, border-color .2s ease;
     padding: 0;
@@ -207,7 +207,7 @@
 
 .dotActive {
     width: 26px;
-    background: #da4874b8;
+    background: #0e0e0e;
     border-color: transparent;
 }
 
