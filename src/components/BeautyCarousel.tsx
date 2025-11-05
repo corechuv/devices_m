@@ -117,7 +117,7 @@ export default function BeautyCarousel({
         className={cls.track}
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
-        {items.map((s, i) => (
+        {items.map((s) => (
           <div className={cls.slide} key={s.id} aria-roledescription="slide">
             <div className={cls.media}>
               <img src={s.img} alt={s.imgAlt ?? s.title ?? "Slide"} className={cls.ap} />
