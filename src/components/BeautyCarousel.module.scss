@@ -2,7 +2,7 @@
 :root {
     --bg: #0b0d12;
     --panel: #0f121a;
-    --text: #eef0f3;
+    --text: #1a1a1a;
     --muted: #747474;
 
     /* warm rose → peach → gold gradient */
@@ -82,7 +82,7 @@
     margin: 0;
     line-height: clamp(32px, 3.4vw, 82px);
     padding: 0 16px;
-    color: #161616
+    color: #161616;
 }
 
 .subtitle {
@@ -139,7 +139,7 @@
 .btnPrimary,
 .btn__primary {
     /* alias for your snippet */
-    background: black;
+    background: #1a1a1a;
     border: none;
     color: white;
 }
