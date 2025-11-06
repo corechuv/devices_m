@@ -39,8 +39,7 @@ const defaultSlides: Slide[] = [
     title: "Soprano Titanium",
     subtitle: "Diode Laser",
     buttons: [
-      { label: "More", variant: "ghost" },
-      { label: "Catalog", variant: "primary" },
+      { label: "Catalog", variant: "primary", href: "/catalog" },
     ],
   },
   {
@@ -61,7 +60,6 @@ const defaultSlides: Slide[] = [
     subtitle: "Consultation on the NiSV certificate",
     buttons: [
       { label: "Book now", variant: "primary" },
-      { label: "More", variant: "ghost" },
     ],
   },
 ];
@@ -135,8 +133,8 @@ export default function BeautyCarousel({
                     variant === "primary"
                       ? cx(cls.btn, cls.btnPrimary, cls.btn__primary) // alias for your snippet
                       : variant === "outline"
-                      ? cx(cls.btn, cls.btnOutline)
-                      : cx(cls.btn);
+                        ? cx(cls.btn, cls.btnOutline)
+                        : cx(cls.btn);
 
                   const common = {
                     className: classFor,
