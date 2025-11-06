@@ -24,8 +24,21 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: clamp(12px, 2vw, 20px);
+
+  /* по умолчанию 3 колонки */
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+
+  /* при сужении – 2 колонки */
+  @media (max-width: 980px) {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+
+  /* если хотите ещё и 1 колонку на очень узких экранах — раскомментируйте
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+  */
 }
 
 .card {
