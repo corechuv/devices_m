@@ -13,56 +13,56 @@ type Product = {
 const products: Product[] = [
   {
     id: "diode-808-pro",
-    name: "Диодный лазер 808 нм PRO",
+    name: "Title",
     image: "/products/g.png",
     price: 1990,
     oldPrice: 2390,
   },
   {
     id: "co2-fractional",
-    name: "Фракционный CO₂-лазер",
+    name: "Title",
     image: "/products/co2-fractional.jpg",
     price: 4990,
     oldPrice: 5990,
   },
   {
     id: "ndyag-1064-532",
-    name: "Nd:YAG 1064/532 нм (двухволновой)",
+    name: "Title",
     image: "/products/ndyag-1064-532.jpg",
     price: 3290,
     oldPrice: 3790,
   },
   {
     id: "alex-755",
-    name: "Александритовый лазер 755 нм",
+    name: "Title",
     image: "/products/alex-755.jpg",
     price: 6900,
     oldPrice: 7900,
   },
   {
     id: "pico-ultimate",
-    name: "Пикосекундный лазер Ultimate",
+    name: "Title",
     image: "/products/pico-ultimate.jpg",
     price: 9800,
     oldPrice: 11500,
   },
   {
     id: "ipl-expert",
-    name: "IPL-система Expert",
+    name: "Title",
     image: "/products/ipl-expert.jpg",
     price: 1790,
     oldPrice: 2190,
   },
   {
     id: "hybrid-diode-yag",
-    name: "Гибридный Diode + Nd:YAG",
+    name: "Title",
     image: "/products/hybrid-diode-yag.jpg",
     price: 5400,
     oldPrice: 6200,
   },
   {
     id: "diode-compact",
-    name: "Диодный лазер Compact 808 нм",
+    name: "Title",
     image: "/products/diode-compact.jpg",
     price: 1490,
     oldPrice: 1790,
@@ -104,6 +104,7 @@ function discountPercent(price: number, oldPrice?: number) {
 export default function Products() {
   return (
     <div className={cls.content}>
+      <h2 className={cls.content__title}>Catalog</h2>
       <ul className={cls.grid} role="list" aria-label="Список оборудования">
         {products.map((p) => {
           const d = discountPercent(p.price, p.oldPrice);

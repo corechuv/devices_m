@@ -122,8 +122,8 @@
     color: var(--text);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    font-weight: 400;
-    letter-spacing: 0.3px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
     transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
     cursor: pointer;
     text-decoration: none;
@@ -142,9 +142,9 @@
 .btnPrimary,
 .btn__primary {
     /* alias for your snippet */
-    background: #1a1a1a;
+    background: #ffc2ef;
     border: none;
-    color: white;
+    color: #000000;
 }
 
 /* Outline variant */
