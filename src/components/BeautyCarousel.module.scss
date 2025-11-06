@@ -68,11 +68,13 @@
     gap: 10px;
     justify-content: flex-end;
     position: absolute;
+    left: 50%;
     bottom: 0;
     padding: 28px 0;
     max-width: 1024px;
-    margin: 0 auto;
     width: 100%;
+    margin: 0 auto;
+    transform: translate(-50%);
 }
 
 .title {
@@ -89,8 +91,8 @@
 
 .subtitle {
     font-size: clamp(18px, 1.8vw, 20px);
+    color: white;
     font-weight: 300;
-    color: var(--muted);
     max-width: 52ch;
     margin: 0;
     padding: 0 16px;
